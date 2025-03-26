@@ -1,61 +1,84 @@
-# SENG8120 Modern Automated Testing 
+### SENG8120 – Modern Automated Testing (Version: Alpaca)
 
-Version: Alpaca
+### Purpose
 
-## Purpose
+This repository contains **Assignment 3**, where we used **Jest** to create a fully tested set of paint project calculation utilities using **TypeScript**.
 
-This repository houses the code we require for examples and assignments.
+Each function has been unit tested with a focus on edge cases, proper error handling, and code quality.
 
-## Repository Usage
+---
 
-This repository will contain branches of code.
+### Repository Usage
 
-Please refer to your instructor's directions on how to use this repository.
+Clone this repository and navigate into the project folder:
 
-## Branch Usage
+```bash
+git clone git@github.com:NithinL11/Assignment3_TS.git
+cd Assignment3_TS
+```
 
-**Installing The Dependencies**
+---
 
-You will need to install dependencies by using:
+### Installing Dependencies
+
+Run the following to install all required packages:
 
 ```bash
 npm install
 ```
 
-**Running The Project**
+---
 
-To run the project, you must first build the project:
+### Running the Project (if applicable)
+
+To build and run the project:
 
 ```bash
 npm run build
-```
-
-followed by:
-
-```bash
 npm start
 ```
+### Running the Tests
 
-Note:  if you make a change in the production code, you must `build` & `start`.
-Otherwise, your changes will not be reflected.
+This project uses **Jest** as the testing framework.
 
-**Running The Tests**
-
-To run the tests, you can use
-
+### Run all tests:
 ```bash
 npm run test
 ```
+or
+```bash
+npx jest
+```
 
-To keep the tests running, you can use
-
+### Keep tests running on file changes:
 ```bash
 npm run test -- --watch
 ```
 
-To run a specific test, you can use
-
+### Run a specific test file:
 ```bash
-npm run test [my test name]
+npx jest src/path/to/your/testFile.test.ts
 ```
 
+---
+
+### What the Project Contains
+
+| Function | Description |
+|----------|-------------|
+| `calculateCanvasDiagonal` | Calculates diagonal using Pythagorean theorem |
+| `calculateCanvasSize` | Calculates area or perimeter of a canvas |
+| `convertAreaToSquareFeet` | Converts square meters to square feet |
+| `estimatePaintingTime` | Estimates painting time from area and speed |
+| `paintRequiredCalculator` | Computes paint needed for a given area and coverage |
+| `paintRequiredForMultipleCoats` | Considers number of coats in paint calculation |
+| `calculatePaintCost` | Calculates cost based on liters and price per liter |
+| `calculateTotalCost` | Sums up labor and paint costs |
+
+---
+
+### For the Marker
+
+- Run `npx jest` to verify that all tests pass
+- All logic and edge cases are tested
+- No additional setup is required after running `npm install`
